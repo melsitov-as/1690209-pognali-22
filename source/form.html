@@ -83,7 +83,7 @@
 
       <div class="scroll-menu">
         <a class="scroll-menu__logo-link" href="index.html" aria-label="Логотип Погнали">
-          <img src="img/small-logotype.svg" width="96" height="15">
+          <img src="img/small-logotype.svg" width="96" height="15" alt="Логотип Погнали">
         </a>
         <button class="hamburger" type="submit">
           <img src="img/hamburger-button.svg" alt="Кнопка Открыть меню" width="25" height="11">
@@ -105,7 +105,8 @@
             <p class="user-profile__level-num form-user-profile__level-num">99</p>
             <p class="user-profile__level-text form-user-profile__level-text">level</p>
           </div>
-          <img class="user-profile__photo form-user-profile__photo" src="img/demin.jpg" width="100" height="100">
+          <img class="user-profile__photo form-user-profile__photo" src="img/demin.jpg" alt="Фото Пети Дёмина"
+            width="100" height="100">
         </div>
         <button class="button user-profile__button">СМЕНИТЬ ФОТО</button>
 
@@ -144,7 +145,7 @@
                   fill="#1D2E5B" />
               </g>
               <defs>
-                <clipPath id="clip0">
+                <clipPath id="clip1">
                   <rect width="17.0398" height="19.2" fill="white" transform="translate(0.0795898 0.919922)" />
                 </clipPath>
               </defs>
@@ -179,35 +180,32 @@
             </svg>
           </li>
         </ul>
+      </div>
     </section>
 
     <section class="my-plans">
       <div class="container">
         <h4 class="page-title my-plans__title">Мои планы:</h4>
-        <dl class="my-plans__list">
-          <div class="my-plans__item">
-            <dt class="my-plans__country">
-              <b>1. Франция, Италия</b>
-            </dt>
-            <dd class="my-plans__description">
+        <ul class="my-plans__list">
+          <li class="my-plans__item">
+            <b class="my-plans__country">1. Франция, Италия</b>
+            <div class="my-plans__description">
               <p>3 ПОПУТЧИКА</p>
               <p>26 МАР - 29 МАР</p>
-            </dd>
+            </div>
             <a class="my-plans__change-button" href="#">ИЗМЕНИТЬ</a>
-          </div>
-        </dl>
-        <dl class="my-plans__list">
-          <div class="my-plans__item">
-            <dt class="my-plans__country">
-              <b>2. Тайланд, Индонезия</b>
-            </dt>
-            <dd class="my-plans__description">
+          </li>
+        </ul>
+        <ul class="my-plans__list">
+          <li class="my-plans__item">
+            <b class="my-plans__country">2. Тайланд, Индонезия</b>
+            <div class="my-plans__description">
               <p>1 ПОПУТЧИК</p>
               <p>1 ИЮЛ - 15 ИЮЛ</p>
-            </dd>
+            </div>
             <a class="my-plans__change-button" href="#">ИЗМЕНИТЬ</a>
-          </div>
-        </dl>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -240,24 +238,337 @@
         <form class="add-plan__form" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="add-plan__form-item">
             <legend class="add-plan__form-legend">
-              <p><b>Шаг 1.</b></p>
-              <p><b>Даты пребывания</b></p>
-              <p>Здесь будет форма</p>
+              <span class="add-plan__step-1"><b>Шаг 1.</b></span>
+              <span class="add-plan__step-1-dates"><b>Даты пребывания</b></span>
             </legend>
+            <p class="add-plan__step-1-decription">Укажите предпочтительное количество попутчиков, которых
+              вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+            <div class="add-plan__companions-number-wrapper">
+              <p class="add-plan__choice-title">ИЩУ ПОПУТЧИКОВ: </p>
+              <p class="add-plan__choice-description">ЧЕЛ.</p>
+            </div>
+            <div class="add-plan__companions-amount-wrapper">
+              <button class="add-plan__button add-plan__button--min">-</button>
+              <input class="add-plan__input" type="number" id="companions-number" name="companions-number">
+              <button class="add-plan__button add-plan__button--max">+</button>
+            </div>
+
+            <label class="add-plan__duration" for="duration">
+              <span class="add-plan__choice-title">ДЛИТЕЛЬНОСТЬ:</span>
+              <span class="add-plan__choice-description">ДН.</span>
+            </label>
+            <div class="add-plan__duration-wrapper">
+              <button class="add-plan__button add-plan__button--min">-</button>
+              <input class="add-plan__input" type="number" id="duration" name="duration">
+              <button class="add-plan__button add-plan__button--max">+</button>
+            </div>
+
+            <input class="add-plan__kids" id="kids" name="kids" type="checkbox">
+            <label class="add-plan__kids-label" for="kids">Можно с детьми</label>
+
+            <div class="calendar add-plan__calendar">
+              <div class="calendar__month-wrapper">
+                <button class="calendar__month-button calendar__month-button--prev">
+                  <img class="calendar__month-button-img" src="img/prev-arrow.svg" alt="Предыдущая" width="14"
+                    height="21">
+                </button>
+                <span class="calendar__month__title">МАРТ 2019</span>
+                <button class="calendar__month-button calendar__month-button--next">
+                  <img class="calendar__month-button-img" src="img/next-arrow.svg" alt="Следующая" width="14"
+                    height="21">
+                </button>
+              </div>
+              <table class="calendar__table">
+                <tr class="calendar__table-row">
+                  <td class="calendar__table-column calendar__table-column-day-of-week">
+                    П
+                  </td>
+                  <td class="calendar__table-column calendar__table-column-day-of-week">
+                    В
+                  </td>
+                  <td class="calendar__table-column calendar__table-column-day-of-week">
+                    С
+                  </td>
+                  <td class="calendar__table-column calendar__table-column-day-of-week">
+                    Ч
+                  </td>
+                  <td class="calendar__table-column calendar__table-column-day-of-week">
+                    П
+                  </td>
+                  <td
+                    class="calendar__table-column calendar__table-column-day-of-week calendar__table-column-day-of-week--weekend">
+                    С
+                  </td>
+                  <td
+                    class="calendar__table-column calendar__table-column-day-of-week calendar__table-column-day-of-week--weekend">
+                    В
+                  </td>
+                </tr>
+                <tr class="calendar__table-row">
+                  <td class="calendar__table-column calendar__date calendar__date--prev-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-23-feb" name="date">
+                    <label for="date-23-feb">23</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--prev-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-24-feb" name="date">
+                    <label for="date-24-feb">24</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--prev-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-25-feb" name="date">
+                    <label for="date-25-feb">25</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--prev-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-26-feb" name="date">
+                    <label for="date-26-feb">26</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--prev-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-27-feb" name="date">
+                    <label for="date-27-feb">27</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--prev-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-28-feb" name="date">
+                    <label for="date-28-feb">28</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-1-mar" name="date">
+                    <label for="date-1-mar">1</label>
+                  </td>
+                </tr>
+                <tr class="calendar__table-row">
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-2-mar" name="date">
+                    <label for="date-2-mar">2</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-3-mar" name="date">
+                    <label for="date-3-mar">3</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-4-mar" name="date">
+                    <label for="date-4-mar">4</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-5-mar" name="date">
+                    <label for="date-5-mar">5</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-6-mar" name="date">
+                    <label for="date-6-mar">6</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-7-mar" name="date">
+                    <label for="date-7-mar">7</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-8-mar" name="date">
+                    <label for="date-8-mar">8</label>
+                  </td>
+                </tr>
+                <tr class="calendar__table-row">
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-9-mar" name="date">
+                    <label for="date-9-mar">9</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-10-mar" name="date">
+                    <label for="date-10-mar">10</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-11-mar" name="date">
+                    <label for="date-11-mar">11</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-12-mar" name="date">
+                    <label for="date-12-mar">12</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-13-mar" name="date">
+                    <label for="date-13-mar">13</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-14-mar" name="date">
+                    <label for="date-14-mar">14</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-15-mar" name="date">
+                    <label for="date-15-mar">15</label>
+                  </td>
+                </tr>
+                <tr class="calendar__table-row">
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-16-mar" name="date">
+                    <label for="date-16-mar">16</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-17-mar" name="date">
+                    <label for="date-17-mar">17</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-18-mar" name="date">
+                    <label for="date-18-mar">18</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-19-mar" name="date">
+                    <label for="date-19-mar">19</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-20-mar" name="date">
+                    <label for="date-20-mar">20</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-21-mar" name="date">
+                    <label for="date-21-mar">21</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-22-mar" name="date">
+                    <label for="date-22-mar">22</label>
+                  </td>
+                <tr class="calendar__table-row">
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-23-mar" name="date">
+                    <label for="date-23-mar">23</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-24-mar" name="date">
+                    <label for="date-24-mar">24</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-25-mar" name="date">
+                    <label for="date-25-mar">25</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-26-mar" name="date">
+                    <label for="date-26-mar">26</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-27-mar" name="date">
+                    <label for="date-27-mar">27</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-28-mar" name="date">
+                    <label for="date-28-mar">28</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-29-mar" name="date">
+                    <label for="date-29-mar">29</label>
+                  </td>
+                </tr>
+                <tr class="calendar__table-row">
+                  <td class="calendar__table-column calendar__date calendar__date--current">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-30-mar" name="date">
+                    <label for="date-30-mar">30</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-31-mar" name="date">
+                    <label for="date-31-mar">31</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current calendar__date--next-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-1-apr" name="date">
+                    <label for="date-1-apr">1</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current calendar__date--next-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-2-apr" name="date">
+                    <label for="date-2-apr">2</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current calendar__date--next-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-3-apr" name="date">
+                    <label for="date-3-apr">3</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current calendar__date--next-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-4-apr" name="date">
+                    <label for="date-4-apr">4</label>
+                  </td>
+                  <td class="calendar__table-column calendar__date calendar__date--current calendar__date--next-month">
+                    <input class="calendar__date-checkbox" type="checkbox" id="date-5-apr" name="date">
+                    <label for="date-5-apr">5</label>
+                  </td>
+                </tr>
+              </table>
+              <button class="button">СЛЕДУЮЩИЙ ШАГ</button>
+            </div>
           </fieldset>
           <fieldset class="add-plan__form-item">
             <legend class="add-plan__form-legend">
-              <p><b>Шаг 2.</b></p>
-              <p><b>Маршрут</b></p>
-              <p>Здесь будет форма</p>
+              <span class="add-plan__step-2"><b>Шаг 2.</b></span>
+              <span class="add-plan__step-2-route"><b>Маршрут</b></span>
             </legend>
+            <div class="add-plan__country-wrapper add-plan__country-wrapper--1">
+              <input class="add-plan__country-radio-input visually-hidden" type="radio" id="country-1" name="country-1"
+                value="country-1">
+              <div class="add-plan__country-1-wrapper">
+                <label for="country-1">
+                  <span>БОСНИЯ И ГЕРЦЕГОВИНА</span>
+                </label>
+                <button class="add-plan__country-button">
+                  <img src="img/down-arrow.svg" alt="Открыть" width="16" height="12">
+                </button>
+              </div>
+              <div class="add-plan__country-flag add-plan__country-flag--bosnia-and-herzegovina"></div>
+            </div>
+            <button class="add-plan__country-cancel-button">
+              <img src="img/cancel.svg" alt="Закрыть" width="9" height="9">
+            </button>
+
+            <div class="add-plan__country-wrapper add-plan__country-wrapper--2">
+              <input class="add-plan__country-radio-input visually-hidden" type="radio" id="country-2" name="country-2"
+                value="country-2">
+              <div class="add-plan__country-2-wrapper">
+                <label for="country-2">
+                  <span>ЧЕХИЯ</span>
+                </label>
+                <button class="add-plan__country-button">
+                  <img src="img/down-arrow.svg" alt="Открыть" width="16" height="12">
+                </button>
+              </div>
+              <div class="add-plan__country-flag add-plan__country-flag--czech"></div>
+            </div>
+            <button class="add-plan__country-cancel-button">
+              <img src="img/cancel.svg" alt="Закрыть" width="9" height="9">
+            </button>
+
+            <div class="add-plan__country-wrapper add-plan__country-wrapper--3">
+              <span>ВЫБЕРИТЕ СТРАНУ</span>
+              <button class="add-plan__country-button">
+                <img src="img/down-arrow.svg" alt="Открыть" width="16" height="12">
+              </button>
+              <div class="add-plan__country-flag add-plan__country-flag--country-choice"></div>
+            </div>
+            <button class="add-plan__country-cancel-button">
+              <img src="img/cancel.svg" alt="Закрыть" width="9" height="9">
+            </button>
+
+            <div class="add-plan__country-wrapper add-plan__country-add">
+              <span class="add-plan__add-country">ДОБАВИТЬ СТРАНУ</span>
+              <button class="add-plan__add-button">
+                <img src="img/add.svg" alt="Добавить" width="14" height="14">
+              </button>
+            </div>
+            <button class="button">СЛЕДУЮЩИЙ ШАГ</button>
+            <button class="button prev-step-button">НА ШАГ НАЗАД</button>
           </fieldset>
+
           <fieldset class="add-plan__form-item">
             <legend class="add-plan__form-legend">
-              <p><b>Шаг 3.</b></p>
-              <p><b>Развлечения</b></p>
-              <p>Здесь будет форма</p>
+              <span class="add-plan__step-3"><b>Шаг 3.</b></span>
+              <span class="add-plan__step-3-entertainments"><b>Развлечения</b></span>
             </legend>
+            <p class="add-plan__entertaiments-description">Наконец, расскажите о своих планах времяпровождения. Можно
+              писать в свободной форме и ставить тэги.
+            </p>
+            <ul class="add-plan__routes-list">
+              <li class="add-plan__routes-item">
+                <span>Босния и Герцеговина</span>
+                <img src="img/bosnia-and-herzegovina.png" alt="Флаг Боснии и Герцеговины" width="35" height="24">
+              </li>
+              <li class="add-plan__routes-item">
+                <span>Чехия</span>
+                <img src="img/czech.png" alt="Флаг Чехии" width="35" height="24">
+              </li>
+            </ul>
+            <textarea class="add-plan__plan-input"
+              required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <button class="button">ОТПРАВИТЬ</button>
+            <button class="button prev-step-button">НА ШАГ НАЗАД</button>
           </fieldset>
         </form>
       </div>
@@ -292,8 +603,9 @@
       <div class="page-footer-copyright">
         <span class="page-footer-copyright__text">Разработано</span>
         <a href="https://htmlacademy.ru/" aria-label="HTML Academy"><img class="page-footer-copyright__logo"
-            src="img/htmlacademy-logo.svg"></a>
+            src="img/htmlacademy-logo.svg" alt="Логотип HTML Academy" width="27" height="33"></a>
       </div>
+    </div>
   </footer>
 
 
