@@ -1,0 +1,242 @@
+.companions {
+  background: url("../img/companions-background-1.png") 151px 70px no-repeat,
+              url("../img/companions-background-2.png") 0px 342px no-repeat,
+              url("../img/companions-background-back.png") 0px 70px no-repeat;
+  background-color: @special-black;
+  position: relative;
+  z-index: 8;
+  padding-top: 100px;
+  padding-bottom: 29px;
+  border-radius: 0 0 27px 27px;
+  margin-bottom: -35px;
+}
+
+
+.companions__page-title {
+  margin: 0 0 22px 0;
+  padding: 0 0 0 23px;
+}
+
+.companions__text {
+  color: @basic-white;
+  font-family: @light;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 22px;
+  margin-bottom: 21px;
+}
+
+.companions__invite-text {
+  color: @basic-white;
+  font-family: @blogger-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  padding-left: 22px;
+  letter-spacing: 0.7px;
+  margin-bottom: 54px;
+}
+
+.companions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.companions__list-item {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.companions__list-item + .companions__list-item {
+  margin-bottom: 20px;
+}
+
+.user-profile__photo-wrapper {
+  position: relative;
+  margin-bottom: -16px;
+  overflow: hidden;
+}
+
+.user-profile__photo:hover {
+  transform: scale(1.3);
+}
+
+.user-profile__info-wrapper {
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 17px;
+  border-radius: 0 0 10px 10px;
+  background-image: linear-gradient(to bottom, transparent 12px, @basic-white 12px);
+}
+
+.user-profile__info-wrapper + .user-profile__info-wrapper {
+  margin-bottom: 40px;
+}
+
+.companions__preff-countries-list {
+  list-style: none;
+  margin: 0 auto 7px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.companions__preff-countries-item + .companions__preff-countries-item {
+  margin-left: 20px;
+}
+
+.user-profile__title {
+  margin: 0 0 16px;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-profile__title-text {
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: @bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: @special-blue;
+  text-decoration: none;
+}
+
+.user-profile__title-text:hover {
+  opacity: 0.7;
+}
+
+.user-profile__title-text:active {
+  opacity: 0.3;
+}
+
+.user-profile__title-text::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: 9px;
+  left: -17px;
+  background-color: @offline-red;
+}
+
+.user-profile__title-text--online.user-profile__title-text::before {
+  background-color: @online-green;
+}
+
+
+.user-status {
+  position: absolute;
+  top: 9px;
+  left: 52px;
+}
+
+.user-status--online {
+  fill: @online-green;
+}
+
+.user-profile__hashtags-list {
+  list-style: none;
+  margin: 0 auto 15px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+.user-profile__hashtags-item {
+  color: @special-grey;
+  font-family: @blogger-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.user-profile__hashtags-item + .user-profile__hashtags-item {
+  margin-left: 5px;
+}
+
+.user-profile__transport-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+.user-profile__transport-item {
+  position: relative;
+}
+
+.user-profile__transport-item + .user-profile__transport-item {
+  margin-left: 12px;
+}
+
+.user-profile__transport-tooltip {
+  display: none;
+  top: 27px;
+  left: -74px;
+  position: absolute;
+  width: 165px;
+  height: 65px;
+  background-color: @tooltip-blue;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.user-profile__transport--avia:hover + .user-profile__transport-tooltip--avia {
+  display: flex;
+}
+
+.user-profile__transport--auto:hover + .user-profile__transport-tooltip--auto {
+  display: flex;
+}
+
+.user-profile__transport--bicycle:hover + .user-profile__transport-tooltip--bicycle {
+  display: flex;
+}
+
+.user-profile__transport--afoot:hover + .user-profile__transport-tooltip--afoot {
+  display: flex;
+}
+
+.user-profile__transport-tooltip:before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: @tooltip-blue;
+  top: 0px;
+  left: 50%;
+  transform: translate(0, -50%) rotate(45deg);
+}
+
+.user-profile__transport-tooltip {
+  font-family: @light;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: @basic-white;
+}
+
+
+
