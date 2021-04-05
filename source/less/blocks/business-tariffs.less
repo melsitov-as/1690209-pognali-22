@@ -1,0 +1,71 @@
+.business-tariffs {
+  display: none;
+  position: absolute;
+  width: 268px;
+  top: 3683px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: @basic-white;
+  z-index: 11;
+  padding-top: 32px;
+  border-radius: 17px;
+  box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
+}
+
+.business-tariffs__page-title {
+  margin: 0 0 30px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.business-tariffs__list {
+  margin: 0 0 37px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.business-tariffs__item {
+  font-family: @light;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special-grey;
+  border-bottom: 1px solid @line-transparent-black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+
+.business-tariffs__item:first-child {
+  border-top: 1px solid @line-transparent-black;
+}
+
+.business-tariffs__close-button {
+  display: block;
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-family: @bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: @light-grey;
+  border: none;
+  color: @special-blue;
+  border-radius: 0 0 17px 17px;
+}
+
+.business-tariffs__close-button:hover span {
+  opacity: 0.7;
+}
+
+.business-tariffs__close-button:active span {
+  opacity: 0.3;
+}
+
