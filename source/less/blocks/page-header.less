@@ -1,17 +1,52 @@
 .page-header {
   position: relative;
   background-color: @basic-dark-blue;
-  padding-top: 19px;
+  padding-top: 20px;
+  z-index: 10;
+}
+
+.page-form-header {
+  background-color: @special-black;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: -30px;
+}
+
+.page-form-header__logo-wrapper {
+  margin-bottom: 53px;
 }
 
 .page-header__small-logo-image {
   width: 96px;
   height: 15px;
+  margin-left: 2px;
 }
 
 .hamburger-open-button__img {
   width: 25px;
   height: 11px;
+}
+
+.page-header__title {
+  position: relative;
+  margin: 0;
+  padding: 0 0 15px 0;
+  font-family: @bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: @basic-white;
+}
+
+.page-header__title::after {
+  position: absolute;
+  content: "";
+  top: 48px;
+  left: 0;
+  width: 214px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: @level-orange;
 }
 
 .hamburger-nav-menu {
@@ -113,17 +148,6 @@
   background-color: transparent;
 }
 
-.page-header__title {
-  color: @basic-white;
-  text-align: center;
-  font-family: @blogger-sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 40px;
-  letter-spacing: 1.5px;
-}
-
 .hamburger-nav-menu__logo-wrapper {
   display: flex;
   justify-content: space-between;
@@ -179,7 +203,7 @@
 }
 
 .hamburger-phone-email__img-wrapper {
-  background-color: @special-dark-blue;
+  background-color: @special-blue-dark;
   padding: 13px 12px 10px 13px;
   border-radius: 50%;
   margin-right: 16px;
