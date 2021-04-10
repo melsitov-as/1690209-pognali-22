@@ -27,7 +27,7 @@
 @online-green: #81e31e;
 @transparent-black: rgba(0, 0, 0, 0.6);
 @dark-grey: #e6e8f1;
-@button-blue: #132576;
+@show-tariffs-blue: #132576;
 @transparent-white: rgba(255, 255, 255, 0.3);
 @light-grey: #f3f4f8;
 @line-transparent-black: rgba(0, 0, 0, 0.05);
@@ -52,12 +52,25 @@
 @checkbox-active-grey: #e2e5f1;
 @text-area-red: #f47e7e;
 @error-message-background: #ffefef;
+@countries-filter-blue: #e2e5f2;
+@table-border-grey: #c4c4c4;
+@close-button-blue: #d6daed;
+@chose-companions-item-border: #f3c72b;
+@likes-button-background-active: #f9eaea;
+@roll-up-button-hover: #c8cee8;
+@likes-button-active-hover: #f9d8d8;
+@transparent-shadow-black: rgba(0, 0, 0, 0.14);
+@transparent-button-shadow: rgba(0, 0, 0, 0.24);
 
 .page-body {
   padding: 0;
   margin: 0 auto;
   width: 320px;
   position: relative;
+}
+
+.page-catalog-main {
+  background-color: @special-blue-light;
 }
 
 .visually-hidden {
@@ -110,6 +123,15 @@
   text-align: left;
 }
 
+.button--user:hover {
+  background-color: @dark-yellow;
+}
+
+.button--user:active p,
+.button--user:active::after {
+  opacity: 0.3;
+}
+
 
 .button--user::after {
   display: inline-block;
@@ -130,7 +152,7 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
-  color: @orange;
+  color: @level-orange;
 }
 
 .user-profile__level {
@@ -150,7 +172,7 @@
   width: 25px;
   height: 51px;
   border-radius: 125px 0 0 125px;
-  border: 4px solid @orange;
+  border: 4px solid @level-orange;
   border-right: none;
   top: 0px;
   left: -1px;
@@ -174,7 +196,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: @orange;
+  background-color: @level-orange;
 }
 
 .half-1--level-99.half-1::before  {
@@ -193,7 +215,7 @@
   width: 27px;
   height: 51px;
   border-radius: 0 125px 125px 0;
-  border: 4px solid @orange;
+  border: 4px solid @level-orange;
   border-left: none;
   top: 0px;
   left: 28px;
@@ -205,7 +227,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: @orange;
+  background-color: @level-orange;
 }
 
 .half-2--level-99.half-2::before {

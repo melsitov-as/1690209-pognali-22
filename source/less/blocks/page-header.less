@@ -5,10 +5,15 @@
   z-index: 10;
 }
 
-.page-form-header {
+.page-form-header,
+.page-catalog-header {
   background-color: @special-black;
   border-radius: 0 0 20px 20px;
   margin-bottom: -30px;
+}
+
+.page-catalog-header {
+  z-index: 12;
 }
 
 .page-form-header__logo-wrapper {
@@ -43,10 +48,17 @@
   content: "";
   top: 48px;
   left: 0;
-  width: 214px;
   height: 5px;
   border-radius: 4px;
   background-color: @level-orange;
+}
+
+.page-header__title--routes::after {
+  width: 214px;
+}
+
+.page-header__title--companions::after {
+  width: 172px;
 }
 
 .hamburger-nav-menu {
