@@ -1,7 +1,7 @@
 .companions {
   background: url("../img/companions-background-1.png") 151px 70px no-repeat,
-              url("../img/companions-background-2.png") 0px 342px no-repeat,
-              url("../img/companions-background-back.png") 0px 70px no-repeat;
+    url("../img/companions-background-2.png") 0 342px no-repeat,
+    url("../img/companions-background-back.png") 0 70px no-repeat;
   background-color: @special-black;
   position: relative;
   z-index: 8;
@@ -137,7 +137,6 @@
   background-color: @online-green;
 }
 
-
 .user-status {
   position: absolute;
   top: 9px;
@@ -200,6 +199,12 @@
   justify-content: center;
   align-items: center;
   z-index: 20;
+  font-family: @light;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: @basic-white;
 }
 
 .user-profile__transport--avia:hover + .user-profile__transport-tooltip--avia {
@@ -218,25 +223,13 @@
   display: flex;
 }
 
-.user-profile__transport-tooltip:before {
+.user-profile__transport-tooltip::before {
   position: absolute;
   content: "";
   width: 5px;
   height: 5px;
   background-color: @tooltip-blue;
-  top: 0px;
+  top: 0;
   left: 50%;
   transform: translate(0, -50%) rotate(45deg);
 }
-
-.user-profile__transport-tooltip {
-  font-family: @light;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 20px;
-  color: @basic-white;
-}
-
-
-

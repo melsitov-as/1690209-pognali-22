@@ -4,7 +4,7 @@
   z-index: 9;
 }
 
-.choose-companion .container{
+.choose-companion .container {
   border-radius: 21px;
   background-color: @yellow;
   padding-top: 24px;
@@ -130,7 +130,7 @@
   display: none;
 }
 
-.choose-music-list__checkbox-input:checked + .choose-music-list__checkbox-label .music-checkbox-off{
+.choose-music-list__checkbox-input:checked + .choose-music-list__checkbox-label .music-checkbox-off {
   display: none;
 }
 
@@ -203,7 +203,7 @@
   opacity: 0.7;
 }
 
-.filter-transport-list__checkbox-input:active + .filter-transport-list__checkbox-label{
+.filter-transport-list__checkbox-input:active + .filter-transport-list__checkbox-label {
   background-color: @checkbox-active-grey;
 }
 
@@ -275,7 +275,7 @@
   background-color: @grey;
   top: 16px;
   left: 102px;
-  box-shadow: 0px 1px 1px 5px @basic-white;
+  box-shadow: 0 1px 1px 5px @basic-white;
   z-index: 10;
 }
 
@@ -288,7 +288,6 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 13px;
-  letter-spacing: 0.06em;
   border: 1px solid @grey;
   box-sizing: border-box;
   text-align: center;
@@ -313,18 +312,6 @@
   border-left-color: @input-grey;
 }
 
-.level-input-min::-webkit-outer-spin-button,
-.level-input-min::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0
-}
-
-.level-input-max::-webkit-outer-spin-button,
-.level-input-max::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0
-}
-
 .level-input-min {
   border-radius: 3px 0 0 3px;
 }
@@ -335,7 +322,7 @@
 
 .level-input-min::-webkit-input-placeholder {
   color: @special-blue;
- }
+}
 
 .level-input-min::-moz-placeholder {
   color: @special-blue;
@@ -364,23 +351,12 @@
   position: absolute;
   width: 153px;
   height: 2px;
-  top: 0px;
+  top: 0;
   left: 67px;
   background-color: @special-blue;
   display: flex;
   justify-content: space-between;
 }
-
-// .level-bar::before,
-// .level-bar::after {
-//   display: inline-block;
-//   content: "";
-//   width: 10px;
-//   height: 10px;
-//   border-radius: 50%;
-//   background-color: @special-blue;
-//   margin-top: -4px;
-// }
 
 .toggler-min,
 .toggler-max {
@@ -436,4 +412,3 @@
   text-align: center;
   text-transform: uppercase;
 }
-

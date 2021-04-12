@@ -37,7 +37,6 @@
 
 .likes-button {
   border: none;
-  background-color: transparent;
   width: 31px;
   height: 31px;
   display: flex;
@@ -47,15 +46,11 @@
   background-color: @special-blue-light;
 }
 
-.likes-button:hover {
-  background-color: @countries-filter-blue;
-}
-
-.likes-button:hover g{
+.likes-button:hover g {
   opacity: 1;
 }
 
-.likes-button:active g{
+.likes-button:active g {
   opacity: 0.3;
 }
 
@@ -71,7 +66,7 @@
   background-color: @likes-button-active-hover;
 }
 
-.likes-button--active:active img{
+.likes-button--active:active img {
   opacity: 0.3;
 }
 
@@ -109,8 +104,7 @@
 }
 
 .user-data__avatar-title:active,
-.user-data__avatar-title:active + .user-data__user-status
- {
+.user-data__avatar-title:active + .user-data__user-status {
   opacity: 0.3;
 }
 
@@ -134,9 +128,6 @@
   font-size: 15px;
   line-height: 18px;
   color: @special-grey;
-}
-
-.user-data__hashtags-item{
   margin-right: 4px;
 }
 
@@ -169,7 +160,6 @@
   padding-left: 12px;
   padding-right: 10px;
   box-sizing: border-box;
-
 }
 
 .wants-visit__list {
@@ -289,12 +279,15 @@
 .transport__item--avia:hover .transport__tooltip--avia {
   display: flex;
 }
+
 .transport__item--auto:hover .transport__tooltip--auto {
   display: flex;
 }
+
 .transport__item--bicycle:hover .transport__tooltip--bicycle {
   display: flex;
 }
+
 .transport__item--afoot:hover .transport__tooltip--afoot {
   display: flex;
 }
@@ -360,7 +353,7 @@
 }
 
 .right-half--level-99 {
-  top: 0px;
+  top: 0;
   left: 22px;
   border-left: none;
   border-radius: 0 25px 25px 0;
@@ -376,7 +369,7 @@
 }
 
 .right-half--level-80 {
-  top: 0px;
+  top: 0;
   left: 22px;
   border-left: none;
   border-radius: 0 25px 25px 0;
@@ -387,7 +380,7 @@
 }
 
 .right-half--level-25 {
-  top: 0px;
+  top: 0;
   left: 22px;
   border-left: none;
   border-radius: 0 25px 25px 0;
@@ -413,7 +406,7 @@
 }
 
 .right-half--level-50 {
-  top: 0px;
+  top: 0;
   left: 22px;
   border-left: none;
   border-radius: 0 25px 25px 0;
@@ -456,6 +449,3 @@
 .call-button:active span {
   opacity: 0.3;
 }
-
-
-
